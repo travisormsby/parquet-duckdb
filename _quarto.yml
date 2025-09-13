@@ -1,0 +1,13 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Columns Good, <br>Rows Bad"
+  site-url: "https://travisormsby.github.io/parquet-duckdb"
+  
+format:
+  html:
+    theme: default
+
+

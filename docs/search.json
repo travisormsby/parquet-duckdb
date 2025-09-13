@@ -1,0 +1,37 @@
+[
+  {
+    "objectID": "columns-good-rows-bad.html#row-orientation",
+    "href": "columns-good-rows-bad.html#row-orientation",
+    "title": "Columns Good, Rows Bad",
+    "section": "Row-orientation",
+    "text": "Row-orientation\n\n\nData view\n\n\n\nAverage\nCount\nZIP\n\n\n\n\n12.5\n7\n01425\n\n\n17.8\n2\n55107\n\n\n\n\nData storage\n12.5|7|01425|17.8|2|55107\n\n\nCSV, RDBMS tables, shapefiles, geopackages\nOptimized for writing records (OLTP)\nBad for most analysis (OLAP)"
+  },
+  {
+    "objectID": "columns-good-rows-bad.html#column-orientation",
+    "href": "columns-good-rows-bad.html#column-orientation",
+    "title": "Columns Good, Rows Bad",
+    "section": "Column-orientation",
+    "text": "Column-orientation\n\n\nData view\n\n\n\nAverage\nCount\nZIP\n\n\n\n\n12.5\n7\n01425\n\n\n17.8\n2\n55107\n\n\n\n\nData storage\n12.5|17.8|7|2|01425|55107\n\n\nOptimized for analysis\nBetter storage compression\nLess complex than OLAP cubes"
+  },
+  {
+    "objectID": "columns-good-rows-bad.html#parquet",
+    "href": "columns-good-rows-bad.html#parquet",
+    "title": "Columns Good, Rows Bad",
+    "section": "Parquet",
+    "text": "Parquet\n\nOpen-source column-oriented format\nSupported by major platforms\nUses metadata for further optimization\nGeoParquet standard supports spatial datatypes"
+  },
+  {
+    "objectID": "columns-good-rows-bad.html#duckdb",
+    "href": "columns-good-rows-bad.html#duckdb",
+    "title": "Columns Good, Rows Bad",
+    "section": "DuckDB",
+    "text": "DuckDB\n\nOpen-source analytical database\nFast\nSingle binary (no dependencies)\nIn-process (easily embeddable)\nReads files as database tables\nBindings available for many languages"
+  },
+  {
+    "objectID": "columns-good-rows-bad.html#demos",
+    "href": "columns-good-rows-bad.html#demos",
+    "title": "Columns Good, Rows Bad",
+    "section": "Demos",
+    "text": "Demos\n\n\nRead files into a DuckDB relation\nQuery optimization using partioning\nQuery across multiple files\nQueries on Parquet are faster than csv\nQuery optimization using row groups\nQuery optimization using multithreading"
+  }
+]
