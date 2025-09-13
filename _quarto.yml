@@ -4,7 +4,7 @@ project:
 
 website:
   title: "Columns Good, <br>Rows Bad"
-  site-url: "https://travisormsby.github.io/parquet-duckdb"
+  site-url: "https://projects.travisormsby.com/parquet-duckdb"
   
 format:
   html:
