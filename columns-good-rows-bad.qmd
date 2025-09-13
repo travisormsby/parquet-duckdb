@@ -1,0 +1,82 @@
+---
+title: "Columns Good, <br>Rows Bad"
+subtitle: "Using GeoParquet and DuckDB"
+date: 2025-10-03
+author: Travis Ormsby
+format: 
+  revealjs:
+    incremental: true
+    theme: dracula
+  pptx: default
+---
+
+## Row-orientation
+:::: {.columns}
+
+::: {.column width="50%"}
+Data view
+
+|Average|Count|ZIP|
+|---|:---:|---|
+|12.5|7|01425|
+|17.8|2|55107|
+:::
+
+::: {.column width="50%" .fragment}
+Data storage
+
+12.5|7|01425|17.8|2|55107
+:::
+::::
+
+- CSV, RDBMS tables, shapefiles, geopackages
+- Optimized for writing records (OLTP)
+- Bad for most analysis (OLAP)
+
+## Column-orientation
+:::: {.columns}
+
+::: {.column width="50%"}
+Data view
+
+|Average|Count|ZIP|
+|---|:---:|---|
+|12.5|7|01425|
+|17.8|2|55107|
+:::
+
+::: {.column width="50%" .fragment}
+Data storage
+
+12.5|17.8|7|2|01425|55107
+:::
+::::
+
+
+- Optimized for analysis
+- Better storage compression
+- Less complex than OLAP cubes
+
+## Parquet
+- Open-source column-oriented format
+- Supported by major platforms
+- Uses metadata for further optimization
+- GeoParquet standard supports spatial datatypes
+
+## DuckDB
+- Open-source analytical database
+- Fast
+- Single binary (no dependencies)
+- In-process (easily embeddable)
+- Reads files as database tables
+- Bindings available for many languages
+
+## Demos
+::: {.nonincremental}
+- Read files into a DuckDB relation
+- Query optimization using partioning
+- Query across multiple files
+- Queries on Parquet are faster than csv
+- Query optimization using row groups
+- Query optimization using multithreading
+:::

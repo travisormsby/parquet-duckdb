@@ -1,0 +1,23 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+
+
+# Config files
+.github
+.venv
+.vscode
+duckdb_profile.json
+
+
+# Data files
+data*
+
+
+/.quarto/
