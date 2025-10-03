@@ -282,12 +282,6 @@ partitioned_files_df = create_parquet_file_info(hive_dir)
 display(partitioned_files_df)
 
 # %%
-# Hive partitioned files don't contain the partitioned by column
-partitioned_file = partitioned_files_df["path"].iloc[0]
-partition_rel = duckdb.read_parquet(partitioned_file)
-partition_rel.project("year")
-
-# %%
 # DuckDB can use globbing to query multiple files
 glob_query = create_query(partitioned_glob, category="year")
 show_query_info(glob_query, display_table=True)
@@ -436,3 +430,16 @@ first_7_fields_sum = partial(create_query, fields=[f"sum(field_{i})" for i in ra
 unoptimized_threads_query = first_7_fields_sum(partitioned_glob)
 optimized_threads_query = first_7_fields_sum(per_thread_glob)
 show_query_info(unoptimized_threads_query, optimized_threads_query)
+
+# %%
+# Query OSM data using Layercake layers
+duckdb.sql("""
+    from 'https://data.openstreetmap.us/layercake/buildings.parquet'
+    select type as osm_type, id as osm_id, tags.*, geometry
+    where try_cast(tags."building:levels" as int) > 1
+        and bbox.xmin > -92.11
+        and bbox.ymin > 46.78
+        and bbox.xmax < -92.10
+        and bbox.ymax < 46.79
+"""
+)
