@@ -1,5 +1,12 @@
 [
   {
+    "objectID": "columns-good-rows-bad.html#resources",
+    "href": "columns-good-rows-bad.html#resources",
+    "title": "Columns Good, Rows Bad",
+    "section": "Resources",
+    "text": "Resources\n\n\n\n\n\nslides\n\n\n\n\n\n\nrepo"
+  },
+  {
     "objectID": "columns-good-rows-bad.html#row-orientation",
     "href": "columns-good-rows-bad.html#row-orientation",
     "title": "Columns Good, Rows Bad",
@@ -32,6 +39,6 @@
     "href": "columns-good-rows-bad.html#demos",
     "title": "Columns Good, Rows Bad",
     "section": "Demos",
-    "text": "Demos\n\n\nRead files into a DuckDB relation\nQuery optimization using partioning\nQuery across multiple files\nQueries on Parquet are faster than csv\nQuery optimization using row groups\nQuery optimization using multithreading"
+    "text": "Demos\n\nRead files into a DuckDB relation\nQuery optimization using partioning\nQuery across multiple files\nQueries on Parquet are faster than csv\nQuery optimization using row groups\nQuery optimization using multithreading"
   }
 ]

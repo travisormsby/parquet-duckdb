@@ -1,1 +1,1 @@
-Sitemap: https://travisormsby.github.io/parquet-duckdb/sitemap.xml
+Sitemap: https://projects.travisormsby.com/parquet-duckdb/sitemap.xml

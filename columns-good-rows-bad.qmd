@@ -13,11 +13,11 @@ format:
 ## Resources
 
 :::: {.columns}
-::: (.column width="50%")
+::: {.column width="50%"}
 ![slides](images/slides.png)
 :::
 
-::: (.column width="50%")
+::: {.column width="50%"}
 ![repo](images/repo.png)
 :::
 ::::
